@@ -1,0 +1,10 @@
+.panel.panel-default.mt20
+  .panel-heading
+    %h3.panel-title Login to Podcaster
+  .panel-body
+    = form_tag '/sessions', method: 'post', role: 'form' do
+      .form-group
+        %label{for: "password-input"} Password
+        = text_field_tag :password, params[:password], placeholder: 'Password', type: 'password',
+          class: 'form-control', id: 'password-input'
+      %button.btn.btn-default{type: "submit"} Submit

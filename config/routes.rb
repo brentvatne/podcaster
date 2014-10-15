@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   root 'sessions#new'
 
-  resources :sessions, only: [:new, :destroy]
+  get '/home', to: 'pages#home', as: 'home'
+  get '/logout', to: 'sessions#destroy', as: 'logout'
+  resources :sessions, only: [:new, :create, :destroy]
 end
