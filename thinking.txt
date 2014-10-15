@@ -1,0 +1,30 @@
+Podcast Description
+--------------------
+- title
+- link
+- language
+- copyright
+- subtitle (itunes:subtitle)
+- author (itunes:author)
+- summary (itunes:summary)
+- description (just the same as summary)
+- owner (itunes:owner)
+  - name (itunes:name)
+  - email (itunes:email)
+- logo (itunes:image - href: the url)
+- category (itunes:category - text: "Society &amp; Culture" )
+
+Episodes
+---------
+- item
+  - title
+  - author (itunes:author)
+  - subtitle (itunes:subtitle)
+  - summary (itunes:summary)
+  - image_url (itunes:image - href)
+  - enclosure
+    - file_url (href on enclosure, also guid)
+    - file_size (length on enclosure)
+    - file_duration (hh:mm:ss - itunes:duration)
+  - publication_date (pubDate eg: Wed, 27 Aug 2014 12:00:00 GMT)
+  - enclosure (same as image_url, but needs the file size and type)
