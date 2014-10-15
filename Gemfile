@@ -9,9 +9,16 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'unicorn'
+gem 'angularjs-rails'
+
+group :development do
+  gem 'foreman'
+end
 
 group :development, :test do
   gem 'pry'
   gem 'pry-remote'
   gem 'rspec'
 end
+
+gem 'rails_12factor', group: :production
