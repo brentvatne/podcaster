@@ -12,6 +12,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'unicorn'
 gem 'angularjs-rails'
 gem 'bootstrap-sass', '~> 3.2.0'
+gem 'active_model_serializers'
+gem 'angular-rails-templates'
 
 group :development do
   gem 'foreman'
