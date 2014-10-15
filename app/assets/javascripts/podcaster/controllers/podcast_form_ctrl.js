@@ -3,7 +3,6 @@ angular.module('podcaster.controllers').
 
     Podcast.get().then(function(podcast) {
       $scope.podcast = podcast;
-      debugger
     })
 
   }])
