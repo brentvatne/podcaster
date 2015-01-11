@@ -1,22 +1,17 @@
 class SessionsController < ApplicationController
-  def new
-    redirect_to home_path if logged_in?
-  end
-
+  
   def create
-    if params[:password] == ENV['SECURE_PASSWORD']
-      session[:logged_in] = true
-      redirect_to home_path
+    @user = User.find_by_email(params[:user_email])
+    if @user.authenticate(params[:password])
+      session[:user_id] = @user.id
+      render json: {message: "Logged in"}
     else
-      session[:logged_in] = false
-      flash.now[:error] = 'Incorrect password'
-      render action: :new
+      render json: {message: "No"}      
     end
   end
 
   def destroy
-    session[:logged_in] = false
-    flash.now[:success] = 'Logged out!'
-    render action: :new
+    session[:user_id] = nil
+    render json: {message: "Logged out"}
   end
 end

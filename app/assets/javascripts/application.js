@@ -9,14 +9,7 @@
 //
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
-//
-//= require jquery
-//= require bootstrap-sprockets
-//= require jquery_ujs
-//= require angular
-//= require angular-ui-router
-//= require angular-rails-templates
-//= require_tree ../templates
-//= require podcaster/modules
-//= require podcaster/app
+//= require react
+//= require react_ujs
+//= require components
 //= require_tree .

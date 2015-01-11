@@ -14,6 +14,8 @@ gem 'angularjs-rails'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'active_model_serializers'
 gem 'angular-rails-templates'
+gem 'bcrypt', '~> 3.1.7'
+gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
 
 group :development do
   gem 'foreman'

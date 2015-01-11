@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+	
+  resources :users
+
   root 'pages#home'
 
   get '/', to: 'pages#home', as: 'home'
