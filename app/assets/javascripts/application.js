@@ -9,7 +9,24 @@
 //
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
+//= require jquery
+//= require underscore
 //= require react
 //= require react_ujs
+//= require flux
+//= require event_emitter
+//= require flux_util
+//= require api_constants
+//= require app_constants
+//= require app_dispatcher
 //= require components
 //= require_tree .
+
+
+$(function() {
+  $.ajaxSetup({
+    headers: {
+      'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+    }
+  });
+});
